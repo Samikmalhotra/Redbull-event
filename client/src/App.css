@@ -1,27 +1,112 @@
 @font-face {
-  font-family: 'gameofsquids';
-  src: url('./fonts/GameOfSquids-1GMVL.eot');
+  font-family: 'GameOfSquids';
+  src: url('./fonts/GameOfSquids-1GMVL.ttf');
   src: url('./fonts/GameOfSquids-1GMVL.ttf') format('truetype')
        url('./fonts/GameOfSquids-1GMVL.woff2') format('woff2')
        url('./fonts/GameOfSquids.woff') format('woff')
        url('./fonts/GameOfSquids.svg') format('svg')
 }
-.welcome{
-  height: 80%;
+body{
+  font-family: 'GameOfSquids';
+}
+.rightman{
+  position: absolute;
+  left: 77.75vw;
+  bottom: 0;
+  height: 70vh;
+}
+.App{
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+.piggy{
+  position: absolute;
+  height: 65vh;
+  left: 5vw;
+  top: 5vh;
+}
+.piggy:nth-child(1){
+  top: 12vh;
+  left: 3.8vw;  
+  z-index: 6;
+
+}
+.piggy:nth-child(2){
+  top: 12vh;
+  left: 3.8vw;  
+  z-index: 7;
 }
 
+.piggy:nth-child(3){
+  z-index: 8;
+}
+.piggy:nth-child(4){
+  z-index: 9;
+}
 
-.landing{
+.landing, .leaderboard{
   background: url("./images/bg.png");
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-x: hidden !important;
 }
 .login{
   background-color: white;
   margin: auto;
   width: 25%; 
-
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(152, 149, 149, 0.25);
+  border-radius: 45px;
+  margin-top: 11.5vh;
+  min-height: 45vh;
+  text-align: center;
 }
+.login-profile{
+  color: red;
+  text-align: center;
+  padding-top: 5%;
+  margin-bottom: 3  %;
+  font-family: 'GameOfSquids';
+}
+
+.login p{
+  margin: 0 auto;
+  text-align: left;
+  width: 73%;
+  padding-bottom: 0;
+}
+
+.login input{
+  background: #313131;
+  border-radius: 10px;
+  width: 75%;
+  line-height: 2.5;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 2vh;
+}
+
+.login button{
+  width: 45%;
+  background: #FF0C49;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 1.35rem;
+  margin-bottom: 2vh;
+  color: #fff;
+  padding: 2%;
+  font-family: 'GameOfSquids';
+}
+
+.login button:hover{
+  color: red;
+  background-color: #000;
+  transition: 0.3s all;
+}
+
 .welcome{
   margin: 0;
-  padding: 5vh;
+  padding: 12vh 0 0 8.5vw;
+  height: 12vh;
 }
