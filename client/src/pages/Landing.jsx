@@ -4,7 +4,7 @@ import welcome from '../images/welcome.png'
 import rightman from '../images/rightman.png'
 const Landing = () => {
   return (
-  <div class="landing">
+  <div className="landing">
     <img src={welcome} className='welcome'/>
     <Login/>
     <img src={rightman} className='rightman'/>

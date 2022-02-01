@@ -21,19 +21,19 @@ body{
 }
 .piggy{
   position: absolute;
-  height: 65vh;
-  left: 5vw;
-  top: 5vh;
+  height: 63vh;
+  left: 8vw;
+  top: 14vh;
 }
 .piggy:nth-child(1){
-  top: 12vh;
-  left: 3.8vw;  
+  top: 18.5vh;
+  left: 7.5vw;  
   z-index: 6;
 
 }
 .piggy:nth-child(2){
-  top: 12vh;
-  left: 3.8vw;  
+  top: 18.5vh;
+  left: 7.5vw;  
   z-index: 7;
 }
 
@@ -43,8 +43,12 @@ body{
 .piggy:nth-child(4){
   z-index: 9;
 }
+.piggy:nth-child(4){
+  z-index: 11;
+  opacity: 0.5;
+}
 
-.landing, .leaderboard{
+.landing, .leaderboard, .questions{
   background: url("./images/bg.png");
   height: 100vh;
   max-height: 100vh;
@@ -108,7 +112,8 @@ body{
 .welcome{
   margin: 0;
   padding: 12vh 0 0 8.5vw;
-  height: 12vh;
+  height: 25vh;
+
 }
 .logo-block{
   padding: 1px;
@@ -123,7 +128,7 @@ body{
   width: 30vw;
   transform: rotate(45deg);
   position: absolute;
-  right: 15vw;
+  right: 12vw;
   top: 20vh;
   height: 30vw;
   overflow: hidden;
@@ -145,5 +150,55 @@ body{
 .innerCustomColumn{
   height: 100%;
   width: 100%;
-  background-color: rgb(241, 241, 243);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+}
+.cansimg-5{
+  z-index: 9;
+  position: absolute;
+  height: 43.5vh;
+  left: 4.5vw;
+  top: 26.5vh;
+}
+
+.cansimg-4{
+  z-index: 9;
+  position: absolute;
+  height: 33.5vh;
+  left: 5.5vw;
+  top: 35vh;
+}
+
+.cansimg-3{
+  z-index: 9;
+  position: absolute;
+  height: 29vh;
+  left: 7.8vw;
+  top: 40.5vh;
+}
+
+.cansimg-2{
+  z-index: 9;
+  position: absolute;
+  height: 10vh;
+  left: 14.7vw;
+  top: 60vh;
+}
+.cansimg-1{
+  z-index: 9;
+  position: absolute;
+  height: 8.9vh;
+  left: 17.7vw;
+  top: 61vh;
+}
+.numberOfCans{
+  color: white;
+  font-family: 'GameOfSquids';
+  position: absolute;
+  top: 80vh;
+  left: 12vw;
+  font-size: 3rem;
+}
+.red{
+  color: #FF0C49;
 }

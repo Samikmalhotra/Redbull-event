@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Login = () => {
-  return <div class="login">
+  return <div className="login">
     <h1 className='login-profile'>PROFILE</h1>
     <form>
     <p>TEAM NAME</p>
