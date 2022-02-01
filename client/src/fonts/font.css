@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'GameOfSquids-1GMVL';
+  src: url('GameOfSquids-1GMVL.eot');
+  src: url('GameOfSquids-1GMVL.eot?#iefix') format('embedded-opentype'),
+       url('GameOfSquids-1GMVL.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GameOfSquids';
+  src: url('GameOfSquids.svg#GameOfSquids') format('svg'),
+       url('GameOfSquids.ttf') format('truetype'),
+       url('GameOfSquids.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
