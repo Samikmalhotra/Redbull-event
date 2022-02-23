@@ -48,41 +48,48 @@ const RegisterForm = () => {
             <p>TEAM NAME</p>
             <input
               type="text"
-              onChange={(e) => setTeamName(e.target.value)}
+              onChange={(e) => setTeamName(e.target.value)} 
+              required
             ></input>
             <p>MEMBER 1 EMAIL</p>
             <input
               type="email"
-              onChange={(e) => setMemberone(e.target.value)}
+              onChange={(e) => setMemberone(e.target.value)} 
+              required
             ></input>
             <p>MEMBER 3 EMAIL</p>
             <input
               type="email"
-              onChange={(e) => setMemberthree(e.target.value)}
+              onChange={(e) => setMemberthree(e.target.value)} 
+              required
             ></input>
           </Col>
           <Col xs={6}>
             <p>TEAM LEADER EMAIL</p>
             <input
               type="email"
-              onChange={(e) => setTeamLeaderEmail(e.target.value)}
+              onChange={(e) => setTeamLeaderEmail(e.target.value)} 
+              required
             ></input>
             <p>MEMBER 2 EMAIL</p>
             <input
               type="email"
-              onChange={(e) => setMembertwo(e.target.value)}
+              onChange={(e) => setMembertwo(e.target.value)} 
+              required
             ></input>
             <p>PASSWORD</p>
             <input
               type="password"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)} 
+              required
             ></input>
           </Col>
         </Row>
 
-        <button type="submit">LOGIN</button>
+        <button type="submit">REGISTER</button>
       </form>
       </Fragment>}
+      <p><a href="/">Login</a></p>
     </div>
   );
 };

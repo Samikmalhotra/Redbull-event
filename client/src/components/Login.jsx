@@ -42,6 +42,7 @@ const Login = () => {
         <p>PASSWORD</p>
         <input type="password" onChange={(e)=>setPassword(e.target.value)}></input>
         <button type="submit">LOGIN</button>
+        <p>New <a href="/register">Register</a></p>
       </form>
       </Fragment>
       
