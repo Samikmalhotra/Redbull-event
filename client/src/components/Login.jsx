@@ -20,6 +20,10 @@ const Login = () => {
     const res = await axios.post('https://redbullapi.ccstiet.com/login/', body)
     setRes(res)
 
+    localStorage.setItem('redbullToken', res.data.token)
+    localStorage.setItem('teamName', res.data.team)
+
+
     if(res && res.data.token){
       navigate('/questions')
     }

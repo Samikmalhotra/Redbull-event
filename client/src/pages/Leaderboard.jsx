@@ -18,7 +18,8 @@ import Navbar from "../components/Navbar";
 
 
 const Leaderboard = () => {
-  const [res, setRes] = useState(null);
+  const [leaderboarddata, setLeaderboard] = useState(null);
+  const [cans, setCans] = useState(0)
   const [falling,setFalling] = useState(true)
 
   setTimeout(()=>{
@@ -27,10 +28,18 @@ const Leaderboard = () => {
 
   useEffect(async () => {
     const res = await axios.get("https://redbullapi.ccstiet.com/leaderboard/");
-    setRes(res);
-    
-  }, [setRes]);
-  console.log(falling)
+    setLeaderboard(res.data);
+    console.log(res.data)
+  }, [setLeaderboard]);
+
+
+  useEffect(async() => {
+    const resp = await axios.get('https://redbullapi.ccstiet.com/cans/')
+    setCans(resp.data.cans)
+    console.log(resp)
+  }, [setCans])
+
+
   return (
     <div className="leaderboard">
       <Navbar/>
@@ -41,7 +50,7 @@ const Leaderboard = () => {
       <img src={piggu3} className="piggy"></img>
       <img src={piggu3} className="piggy"></img>
       <p className="numberOfCans">
-        6768 <br />
+        {cans &&cans} <br />
         <span className="red">C</span>A<span className="red">N</span>S
       </p>
       <img
@@ -57,6 +66,17 @@ const Leaderboard = () => {
       <img src={fifthcan} className="cansimg-5"></img>
       {falling?<img src={fallingimg} className="falling"/>: ''}
       <div className="logo-div">
+        {leaderboarddata && leaderboarddata.length > 0 && leaderboarddata.map(team=>{
+          return(
+            <div className="leaderboard-block">
+          <Tooltip title="teamname" placement="top" arrow>
+            <div className="leaderboard-block-div">
+              <h2>ABC</h2>
+            </div>
+          </Tooltip>
+        </div>
+          )
+        })}
         <div className="leaderboard-block">
           <Tooltip title="teamname" placement="top" arrow>
             <div className="leaderboard-block-div">
