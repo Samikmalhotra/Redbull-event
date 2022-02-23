@@ -192,32 +192,32 @@ body{
 .cansimg-4{
   z-index: 9;
   position: absolute;
-  height: 33.5vh;
-  left: 5.5vw;
-  top: 35vh;
+  height: 50vh;
+  left: 25.2vw;
+  top: 59.5vh;
 }
 
 .cansimg-3{
   z-index: 9;
   position: absolute;
-  height: 29vh;
-  left: 7.8vw;
-  top: 40.5vh;
+  height: 37vh;
+  left: 29.8vw;
+  top: 72.5vh;
 }
 
 .cansimg-2{
   z-index: 9;
   position: absolute;
-  height: 10vh;
-  left: 14.7vw;
-  top: 60vh;
+  height: 17vh;
+  left: 35.7vw;
+  top: 93vh;
 }
 .cansimg-1{
   z-index: 9;
   position: absolute;
-  height: 8.9vh;
-  left: 17.7vw;
-  top: 61vh;
+  height: 12.9vh;
+  left: 43.7vw;
+  top: 95vh;
 }
 .numberOfCans{
   color: white;
@@ -294,6 +294,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
 }
 .leaderboard-block-div h2{
@@ -307,15 +308,50 @@ body{
 .nav-bar{
   position: fixed;
   left: 10px;
-  top: 50vh;
+  top: 40vh;
 }
 .nav-div{
-  width: 10%;
-  height: 10%;
+  min-width: 5vw;
+  /* min-height: 4vh; */
+  background-color: #fff;
+}
+.nav-div li{
+  padding: 5%;
 }
 .redbull-big-can{
   left: 0;
   bottom: 0;
   position: fixed;
   height: 45vh;
+}
+.leaderboard-block-div:before, .leaderboard-block-div:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #d00;
+}
+
+.leaderboard-block-div:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+.leaderboard-block-div:after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
+}
+.cross-img{
+  height: 70%;
+  position: absolute;
+}
+.falling{
+  position: absolute;
+  z-index: 20 !important;
+  height: 55vh;
+  left: 80vh;
+  top: 20vh;
 }

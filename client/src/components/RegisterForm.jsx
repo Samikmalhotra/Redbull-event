@@ -40,7 +40,7 @@ const RegisterForm = () => {
 
   return (
     <div className="register">
-      {res && res.data.success ? <p>Your team has been successfully registered</p>:<Fragment>
+      {res && res.data.success ? <p className="task">Your team has been successfully registered</p>:<Fragment>
         <h1 className="login-profile">REGISTER</h1>
       <form onSubmit={submitHandler}>
         <Row>
