@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
 import {Row, Col} from 'react-bootstrap'
+import Navbar from '../components/Navbar';
 import questions from '../images/QUESTIONS.png'
 
 const Questions = () => {
   return <div className='questions'>
+    <Navbar/>
       <img src={questions} className='questions-img'/>
       <div className="login">
              

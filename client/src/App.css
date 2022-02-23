@@ -355,3 +355,6 @@ body{
   left: 80vh;
   top: 20vh;
 }
+.actiona{
+  background: inherit;
+}

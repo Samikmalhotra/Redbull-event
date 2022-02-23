@@ -14,6 +14,7 @@ import x from "../images/x.png";
 import axios from "axios";
 import Tooltip from "@mui/material/Tooltip";
 import fallingimg from '../images/falling.gif'
+import Navbar from "../components/Navbar";
 
 
 const Leaderboard = () => {
@@ -32,6 +33,7 @@ const Leaderboard = () => {
   console.log(falling)
   return (
     <div className="leaderboard">
+      <Navbar/>
       <img src={leaderboard} className="leaderboard-img"></img>
       <img src={ellipse1} className="piggy"></img>
       {/* <img src={ellipse2} className='piggy'></img> */}
