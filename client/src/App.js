@@ -5,6 +5,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Leaderboard from './pages/Leaderboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Questions from './pages/Questions';
+import Register from './pages/Register';
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
           <Route path='/' element={<Landing/>}/>
           <Route path='leaderboard' element={<Leaderboard/>}/>
           <Route path='questions' element={<Questions/>}/>
+          <Route path='register' element={<Register/>}/>
         </Routes>
       </BrowserRouter>
     </div>

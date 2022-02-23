@@ -65,6 +65,17 @@ body{
   min-height: 45vh;
   text-align: center;
 }
+.register{
+  background-color: white;
+  margin: auto;
+  width: 65%; 
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(152, 149, 149, 0.25);
+  border-radius: 45px;
+  margin-top: 11.5vh;
+  min-height: 45vh;
+  text-align: center;
+}
 .login-profile{
   color: red;
   text-align: center;
@@ -73,14 +84,14 @@ body{
   font-family: 'GameOfSquids';
 }
 
-.login p{
+.login p, .register p{
   margin: 0 auto;
-  text-align: left;
-  width: 73%;
+  text-align: center;
+  width: 75%;
   padding-bottom: 0;
 }
 
-.login input{
+.login input, .register input{
   background: #313131;
   border-radius: 10px;
   width: 75%;
@@ -90,7 +101,7 @@ body{
   margin-bottom: 2vh;
 }
 
-.login button{
+.login button, .register button{
   width: 45%;
   background: #FF0C49;
   border-radius: 10px;
@@ -103,7 +114,7 @@ body{
   font-family: 'GameOfSquids';
 }
 
-.login button:hover{
+.login button:hover, .register button:hover{
   color: red;
   background-color: #000;
   transition: 0.3s all;
@@ -157,8 +168,8 @@ body{
   z-index: 9;
   position: absolute;
   height: 43.5vh;
-  left: 4.5vw;
-  top: 26.5vh;
+  left: 7vw;
+  top: 33.5vh;
 }
 
 .cansimg-4{
@@ -201,4 +212,37 @@ body{
 }
 .red{
   color: #FF0C49;
+}
+.question-div{
+  width: 65%;
+  margin-left: 7.5%;
+  height: 65vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.question{
+  width: 85%;
+  background: rgba(196, 196, 196, 0.2);
+  border-radius: 20px;
+  color: white;
+  font-family: 'GameOfSquids';
+  padding: 1.5%;
+  margin: 2vh;
+  font-size: 1.4rem;
+}
+.answer-div{
+  margin-left: 0.25vw;
+  margin-bottom: 5vh;
+}
+.answer{
+  background: url(./images/ans_bg.png);
+  border-radius: 10px;
+  padding: 1.5% 4%;
+  margin: 2vh;
+  width: 67%;
+  color: white;
+  font-family: 'GameOfSquids';
+}
+.landing input{
+  color: white;
 }

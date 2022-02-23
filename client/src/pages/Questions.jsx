@@ -10,10 +10,57 @@ const Questions = () => {
           </div>
           <div className='answer-div'>
               <Row>
-                  <Col xs={6}></Col>
-                  <Col xs={6}></Col>
-                  <Col xs={6}></Col>
-                  <Col xs={6}></Col>    
+                  <Col xs={6}>
+                      <div className='answer'>
+                          NADA
+
+                      </div>
+                  </Col>
+                  <Col xs={6}>
+                      <div className='answer'>
+                          NADA
+
+                      </div>
+                  </Col>
+                  <Col xs={6}>
+                      <div className='answer'>
+                          NADA
+
+                      </div>
+                  </Col>
+                  <Col xs={6}>
+                      <div className='answer'>
+                          NADA
+                          </div></Col>    
+              </Row>
+          </div>
+          <div className='question'>
+                What is this behaviour?
+          </div>
+          <div className='answer-div'>
+              <Row>
+                  <Col xs={6}>
+                      <div className='answer'>
+                          NADA
+
+                      </div>
+                  </Col>
+                  <Col xs={6}>
+                      <div className='answer'>
+                          NADA
+
+                      </div>
+                  </Col>
+                  <Col xs={6}>
+                      <div className='answer'>
+                          NADA
+
+                      </div>
+                  </Col>
+                  <Col xs={6}>
+                      <div className='answer'>
+                          NADA
+                          </div></Col>    
               </Row>
           </div>
       </div>

@@ -21,8 +21,8 @@ const Leaderboard = () => {
         {/* <img src={firstcan} className='cansimg-1'></img>
         <img src={secondcan} className='cansimg-2'></img>
         <img src={thirdcan} className='cansimg-3'></img>
-        <img src={fourthcan} className='cansimg-4'></img>
-        <img src={fifthcan} className='cansimg-5'></img> */}
+        <img src={fourthcan} className='cansimg-4'></img> */}
+        <img src={fifthcan} className='cansimg-5'></img>
                 <div className='logo-div'>
                 {/* <Row>
                     <Col xs={2}>
