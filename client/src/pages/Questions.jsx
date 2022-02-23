@@ -1,69 +1,22 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import {Row, Col} from 'react-bootstrap'
+import questions from '../images/QUESTIONS.png'
 
 const Questions = () => {
   return <div className='questions'>
-      <h1>Questions</h1>
-      <div className='question-div'>
-          <div className='question'>
-                What is this behaviour?
-          </div>
-          <div className='answer-div'>
-              <Row>
-                  <Col xs={6}>
-                      <div className='answer'>
-                          NADA
-
-                      </div>
-                  </Col>
-                  <Col xs={6}>
-                      <div className='answer'>
-                          NADA
-
-                      </div>
-                  </Col>
-                  <Col xs={6}>
-                      <div className='answer'>
-                          NADA
-
-                      </div>
-                  </Col>
-                  <Col xs={6}>
-                      <div className='answer'>
-                          NADA
-                          </div></Col>    
-              </Row>
-          </div>
-          <div className='question'>
-                What is this behaviour?
-          </div>
-          <div className='answer-div'>
-              <Row>
-                  <Col xs={6}>
-                      <div className='answer'>
-                          NADA
-
-                      </div>
-                  </Col>
-                  <Col xs={6}>
-                      <div className='answer'>
-                          NADA
-
-                      </div>
-                  </Col>
-                  <Col xs={6}>
-                      <div className='answer'>
-                          NADA
-
-                      </div>
-                  </Col>
-                  <Col xs={6}>
-                      <div className='answer'>
-                          NADA
-                          </div></Col>    
-              </Row>
-          </div>
-      </div>
+      <img src={questions} className='questions-img'/>
+      <div className="login">
+             
+             <Fragment>
+            <h3 className="quiz-profile">Hi, </h3>
+             <h1 className="login-profile">TEAM NAME</h1>
+           <p className='task'>Here is your task</p>
+             <button type="submit">QUIZ</button>
+          
+           </Fragment>
+           
+           
+         </div>
   </div>;
 };
 

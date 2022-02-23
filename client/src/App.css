@@ -53,6 +53,7 @@ body{
   height: 100vh;
   max-height: 100vh;
   overflow-x: hidden !important;
+  background-size: cover;
 }
 .login{
   background-color: white;
@@ -139,12 +140,12 @@ body{
   margin: 2vh;  
 }
 .logo-div{
-  width: 30vw;
-  transform: rotate(45deg);
+  width: 33vw;
+  /* transform: rotate(45deg); */
   position: absolute;
   right: 12vw;
   top: 20vh;
-  height: 30vw;
+  height: 33vw;
   overflow: hidden;
   /* background-color: white; */
 }
@@ -248,4 +249,44 @@ body{
 }
 .landing input{
   color: white;
+}
+.leaderboard-img{
+  height: 65%;
+  position: relative;
+  top: -20px;
+}
+.task{
+  font-family: 'GameOfSquids';
+  margin: 5% auto !important;
+}
+.quiz-profile{
+  color: red;
+  text-align: center;
+  padding-top: 5%;
+  font-family: 'GameOfSquids';
+}
+.leaderboard-block{
+  height: 19%;
+  width: 20%;
+  display: inline-block;
+  margin: 0;
+  padding: 2%;
+  background-color: transparent;
+}
+.leaderboard-block-div{
+  padding: 3%;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.leaderboard-block-div h2{
+  position: relative;
+  /* left: 7%;
+  top: 13%; */
+  /* transform: rotate(-45deg); */
+  font-family: 'GameOfSquids';
+  font-size: 1.73vw;
 }

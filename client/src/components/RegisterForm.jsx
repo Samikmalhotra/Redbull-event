@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
   const [teamName, setTeamName] = useState("");
@@ -10,6 +11,9 @@ const RegisterForm = () => {
   const [membertwo, setMembertwo] = useState("");
   const [memberthree, setMemberthree] = useState("");
   const [password, setPassword] = useState("");
+  const [res, setRes] = useState(null)
+
+  const navigate = useNavigate()
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -23,11 +27,16 @@ const RegisterForm = () => {
     };
 
     const res = await axios.post(
-      "https://redbullapi.ccstiet.com/register",
+      "https://redbullapi.ccstiet.com/register/",
       body
     );
-    console.log(res);
+
+    setRes(res)
+
+
   };
+
+  
 
   return (
     <div className="register">
