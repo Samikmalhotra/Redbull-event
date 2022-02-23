@@ -11,7 +11,7 @@ const Login = () => {
       "email": email,
       "password": password
     }
-    const res = await axios.post('http://9e05-2401-4900-1719-2702-d1b1-bba3-bab8-e0bd.ngrok.io/login', body)
+    const res = await axios.post('https://redbullapi.ccstiet.com/login', body)
   }
 
   return (

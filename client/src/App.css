@@ -61,7 +61,7 @@ body{
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(152, 149, 149, 0.25);
   border-radius: 45px;
-  margin-top: 11.5vh;
+  margin-top: 0;
   min-height: 45vh;
   text-align: center;
 }
@@ -72,7 +72,7 @@ body{
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(152, 149, 149, 0.25);
   border-radius: 45px;
-  margin-top: 11.5vh;
+  margin-top: 1.5vh;
   min-height: 45vh;
   text-align: center;
 }
@@ -122,8 +122,11 @@ body{
 
 .welcome{
   margin: 0;
-  padding: 12vh 0 0 8.5vw;
-  height: 25vh;
+  padding: 0 0 0 8.5vw;
+  height: 45vh;
+  width: 80vw;
+  position: relative;
+  top: -50px;
 
 }
 .logo-block{

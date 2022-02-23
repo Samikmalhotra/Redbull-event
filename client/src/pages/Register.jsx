@@ -1,6 +1,5 @@
 import React from 'react';
-import Login from '../components/Login';
-import welcome from '../images/welcome.png'
+import welcome from '../images/Group 224.png'
 import rightman from '../images/rightman.png'
 import RegisterForm from '../components/RegisterForm';
 const Register = () => {
