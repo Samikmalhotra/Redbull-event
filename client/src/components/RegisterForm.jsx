@@ -1,5 +1,5 @@
 import axios from "axios";
-import React from "react";
+import React, { Fragment } from "react";
 import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -40,7 +40,8 @@ const RegisterForm = () => {
 
   return (
     <div className="register">
-      <h1 className="login-profile">REGISTER</h1>
+      {res && res.data.success ? <p>Your team has been successfully registered</p>:<Fragment>
+        <h1 className="login-profile">REGISTER</h1>
       <form onSubmit={submitHandler}>
         <Row>
           <Col xs={6}>
@@ -81,6 +82,7 @@ const RegisterForm = () => {
 
         <button type="submit">LOGIN</button>
       </form>
+      </Fragment>}
     </div>
   );
 };

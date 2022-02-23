@@ -16,24 +16,24 @@ body{
   height: 70vh;
 }
 .App{
-  max-height: 100vh;
+  /* max-height: 100vh; */
   overflow-y: hidden;
 }
 .piggy{
   position: absolute;
-  height: 63vh;
-  left: 8vw;
+  height: 96vh;
+  left: 24.5vw;
   top: 14vh;
 }
 .piggy:nth-child(1){
   top: 18.5vh;
-  left: 7.5vw;  
+  left: 24.5vw;  
   z-index: 6;
 
 }
 .piggy:nth-child(2){
   top: 18.5vh;
-  left: 7.5vw;  
+  left: 24.5vw;  
   z-index: 7;
 }
 
@@ -48,12 +48,23 @@ body{
   opacity: 0.5;
 }
 
-.landing, .leaderboard, .questions{
+.landing, .questions{
   background: url("./images/bg.png");
   height: 100vh;
   max-height: 100vh;
   overflow-x: hidden !important;
   background-size: cover;
+  background-attachment: fixed;
+}
+.leaderboard{
+  background: url("./images/bg.png");
+  /* height: 100vh; */
+  /* max-height: 100vh; */
+  /* overflow-x: hidden !important; */
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 300vh !important;
+
 }
 .login{
   background-color: white;
@@ -140,13 +151,15 @@ body{
   margin: 2vh;  
 }
 .logo-div{
-  width: 33vw;
+  width: 85vw;
   /* transform: rotate(45deg); */
   position: absolute;
-  right: 12vw;
+  right: 5vw;
   top: 20vh;
-  height: 33vw;
+  height: 85vw;
   overflow: hidden;
+  margin-top: 100vh;
+
   /* background-color: white; */
 }
 .customColumn{
@@ -171,9 +184,9 @@ body{
 .cansimg-5{
   z-index: 9;
   position: absolute;
-  height: 43.5vh;
-  left: 7vw;
-  top: 33.5vh;
+  height: 68vh;
+  left: 22vw;
+  top: 43.5vh;
 }
 
 .cansimg-4{
@@ -210,9 +223,10 @@ body{
   color: white;
   font-family: 'GameOfSquids';
   position: absolute;
-  top: 80vh;
-  left: 12vw;
+  top: 50vh;
+  right: 12vw;
   font-size: 3rem;
+
 }
 .red{
   color: #FF0C49;
@@ -251,7 +265,7 @@ body{
   color: white;
 }
 .leaderboard-img{
-  height: 65%;
+  height: 35%;
   position: relative;
   top: -20px;
 }
@@ -266,11 +280,11 @@ body{
   font-family: 'GameOfSquids';
 }
 .leaderboard-block{
-  height: 19%;
-  width: 20%;
+  height: 10%;
+  width: 10%;
   display: inline-block;
   margin: 0;
-  padding: 2%;
+  padding: 1%;
   background-color: transparent;
 }
 .leaderboard-block-div{
@@ -289,4 +303,19 @@ body{
   /* transform: rotate(-45deg); */
   font-family: 'GameOfSquids';
   font-size: 1.73vw;
+}
+.nav-bar{
+  position: fixed;
+  left: 10px;
+  top: 50vh;
+}
+.nav-div{
+  width: 10%;
+  height: 10%;
+}
+.redbull-big-can{
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  height: 45vh;
 }

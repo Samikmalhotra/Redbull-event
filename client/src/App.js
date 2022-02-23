@@ -6,9 +6,11 @@ import Leaderboard from './pages/Leaderboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Questions from './pages/Questions';
 import Register from './pages/Register';
+import Navbar from './components/Navbar';
 function App() {
   return (
     <div className="App">
+      <Navbar></Navbar>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Landing/>}/>
