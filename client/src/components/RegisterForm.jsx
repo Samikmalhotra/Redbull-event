@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Fragment } from "react";
 import { useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Toast, ToastContainer } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
@@ -12,6 +12,9 @@ const RegisterForm = () => {
   const [memberthree, setMemberthree] = useState("");
   const [password, setPassword] = useState("");
   const [res, setRes] = useState(null)
+  const [customerror, setError] = useState(false)
+  const [show, setShow] = useState(false);
+
 
   const navigate = useNavigate()
 
@@ -26,12 +29,19 @@ const RegisterForm = () => {
       password: password,
     };
 
-    const res = await axios.post(
-      "https://redbullapi.ccstiet.com/register/",
-      body
-    );
 
-    setRes(res)
+    try {
+      const res = await axios.post(
+        "https://redbullapi.ccstiet.com/register/",
+        body
+      );
+  
+      setRes(res)
+    } catch (error) {
+      setError(true);
+      setShow(true);
+    }
+    
 
 
   };
@@ -40,7 +50,7 @@ const RegisterForm = () => {
 
   return (
     <div className="register">
-      {res && res.data.success ? <p className="task">Your team has been successfully registered</p>:<Fragment>
+      {res && res.data && res.data.success ? <p className="task">Your team has been successfully registered</p>:<Fragment>
         <h1 className="login-profile">REGISTER</h1>
       <form onSubmit={submitHandler}>
         <Row>
@@ -89,6 +99,24 @@ const RegisterForm = () => {
         <button type="submit">REGISTER</button>
       </form>
       </Fragment>}
+      {customerror ? (
+          <ToastContainer className="p-3" position="bottom-start" autohide> 
+            <Toast onClose={()=>setShow(false)} show={show} delay={5000} autohide>
+              <Toast.Header closeButton={false}>
+                <img
+                  src="holder.js/20x20?text=%20"
+                  className="rounded me-2"
+                  alt=""
+                />
+                <strong className="me-auto">Red Rush</strong>
+                <small>HackTU</small>
+              </Toast.Header>
+              <Toast.Body>Try Again with a different team name or check if members are already in another team</Toast.Body>
+            </Toast>
+          </ToastContainer>
+        ) : (
+          ""
+        )}
       <p><a href="/">Login</a></p>
     </div>
   );

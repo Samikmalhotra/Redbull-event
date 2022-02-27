@@ -13,36 +13,30 @@ import { useState } from "react";
 import x from "../images/x.png";
 import axios from "axios";
 import Tooltip from "@mui/material/Tooltip";
-import fallingimg from '../images/falling.gif'
+import fallingimg from "../images/falling.gif";
 import Navbar from "../components/Navbar";
-
 
 const Leaderboard = () => {
   const [leaderboarddata, setLeaderboard] = useState(null);
-  const [cans, setCans] = useState(0)
-  const [falling,setFalling] = useState(true)
+  const [cans, setCans] = useState(0);
+  const [falling, setFalling] = useState(true);
 
-  setTimeout(()=>{
-    setFalling(false)
-  }, 1900)
+  setTimeout(() => {
+    setFalling(false);
+  }, 1900);
 
-
-
-  useEffect(async() => {
-    const resp = await axios.get('https://redbullapi.ccstiet.com/cans/')
-    setCans(resp.data.cans)
+  useEffect(async () => {
+    const resp = await axios.get("https://redbullapi.ccstiet.com/cans/");
+    setCans(resp.data.cans);
     const res = await axios.get("https://redbullapi.ccstiet.com/leaderboard/");
     setLeaderboard(res);
+  }, [setCans, setLeaderboard]);
 
-  }, [setCans, setLeaderboard])
-
-  console.log(leaderboarddata && leaderboarddata.data)
-
-
+  console.log(leaderboarddata && leaderboarddata.data);
 
   return (
     <div className="leaderboard">
-      <Navbar/>
+      <Navbar />
       <img src={leaderboard} className="leaderboard-img"></img>
       <img src={ellipse1} className="piggy"></img>
       {/* <img src={ellipse2} className='piggy'></img> */}
@@ -50,7 +44,7 @@ const Leaderboard = () => {
       <img src={piggu3} className="piggy"></img>
       <img src={piggu3} className="piggy"></img>
       <p className="numberOfCans">
-        {cans &&cans} <br />
+        112 <br />
         <span className="red">C</span>A<span className="red">N</span>S
       </p>
       <img
@@ -59,26 +53,79 @@ const Leaderboard = () => {
         }
         className="redbull-big-can"
       />
+      {/* {cans && cans < 113 ? <img src={fifthcan} className="cansimg-5"></img> : cans && cans < 300 ? <img src={fourthcan} className="cansimg-4"></img> : cans && cans < 500 ?  <img src={thirdcan} className="cansimg-3"></img> : cans && cans < 700 ? <img src={secondcan} className="cansimg-2"></img> :       <img src={firstcan} className="cansimg-1"></img>} */}
       <img src={firstcan} className="cansimg-1"></img>
       <img src={secondcan} className="cansimg-2"></img>
       <img src={thirdcan} className="cansimg-3"></img>
       <img src={fourthcan} className="cansimg-4"></img>
       <img src={fifthcan} className="cansimg-5"></img>
-      {falling?<img src={fallingimg} className="falling"/>: ''}
+      {falling ? <img src={fallingimg} className="falling" /> : ""}
       <div className="logo-div">
-        {leaderboarddata && leaderboarddata.data.length > 0 && leaderboarddata.data.map(team=>{
-          return(
-            <div className="leaderboard-block">
-          <Tooltip title={team.teamName} placement="top" arrow>
+        <div className="leaderboard-block">
+          <Tooltip title="Team KAKA" placement="top" arrow>
             <div className="leaderboard-block-div">
-              <h2>{team.teamName.slice(0,3)}</h2>
-              {team.eliminated === 'yes' ? <img src={x} className="cross-img"></img>: ''}
+              <h2>TEA</h2>
             </div>
           </Tooltip>
         </div>
-          )
-        })}
-        
+        <div className="leaderboard-block">
+          <Tooltip title="Web of lies" placement="top" arrow>
+            <div className="leaderboard-block-div">
+              <h2>WEB</h2>
+            </div>
+          </Tooltip>
+        </div>
+        <div className="leaderboard-block">
+          <Tooltip title="FormalDehide" placement="top" arrow>
+            <div className="leaderboard-block-div">
+              <h2>FOR</h2>
+            </div>
+          </Tooltip>
+        </div>
+        <div className="leaderboard-block">
+          <Tooltip title="Algo Naughts" placement="top" arrow>
+            <div className="leaderboard-block-div">
+              <h2>ALG</h2>
+            </div>
+          </Tooltip>
+        </div>
+        <div className="leaderboard-block">
+          <Tooltip title="Team Sixtynine" placement="top" arrow>
+            <div className="leaderboard-block-div">
+              <h2>TEA</h2>
+            </div>
+          </Tooltip>
+        </div>
+        <div className="leaderboard-block">
+          <Tooltip title="Aces" placement="top" arrow>
+            <div className="leaderboard-block-div">
+              <h2>ACE</h2>
+            </div>
+          </Tooltip>
+        </div>
+        <div className="leaderboard-block">
+          <Tooltip title="Innovatio" placement="top" arrow>
+            <div className="leaderboard-block-div">
+              <h2>INN</h2>
+            </div>
+          </Tooltip>
+        </div>
+        {leaderboarddata &&
+          leaderboarddata.data.length > 0 &&
+          leaderboarddata.data.map((team) => {
+            return (
+              <div className="leaderboard-block">
+                <Tooltip title={team.teamName} placement="top" arrow>
+                  <div className="leaderboard-block-div">
+                    <h2>{team.teamName.slice(0, 3)}</h2>
+                   
+                      <img src={x} className="cross-img"></img>
+                   
+                  </div>
+                </Tooltip>
+              </div>
+            );
+          })}
       </div>
     </div>
   );
